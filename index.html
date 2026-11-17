@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Djenar Naesya Ayu • Portofolio Arsitektur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="progres" id="progres"></div>
+<div class="latar" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
+<!-- Lagu utama ada di folder lagu/. Ganti lewat tombol "lagu kita" tanpa mengubah file. -->
+<audio id="lagu" src="lagu/siapkah-kau-tuk-jatuh-cinta-lagi.mp3" loop preload="auto"></audio>
+<input type="file" id="pilihLagu" accept="audio/*" hidden>
+
+<div class="panel-musik">
+  <button id="tema" class="kecil" type="button" aria-pressed="false">Mode malam</button>
+  <button id="gantiLagu" class="kecil" type="button">🎵 lagu kita</button>
+  <button id="musik" class="vinyl" aria-label="Putar atau hentikan musik" aria-pressed="false">
+    <span class="disc"></span>
+    <span class="label" id="musikLabel">putar lagu</span>
+  </button>
+</div>
+
+<header class="hero" id="beranda">
+  <div class="hero-text">
+    <p class="hai">hai hai, aku</p>
+    <h1>Djenar<br>Naesya<br>Ayu</h1>
+    <p class="sub">Mahasiswi Arsitektur Universitas Negeri Surabaya yang suka menggambar ruang kecil yang hangat, warna pastel, dan kopi susu.</p>
+    <a class="tombol" href="#proyek">Lihat galeri</a>
+  </div>
+
+  <div class="avatar" id="avatar" aria-label="Ilustrasi Djenar">
+    <svg viewBox="0 0 200 200" role="img">
+      <circle cx="42" cy="48" r="26" fill="#6b3a4f"/><circle cx="158" cy="48" r="26" fill="#6b3a4f"/>
+      <circle cx="42" cy="48" r="14" fill="#ffb3c7"/><circle cx="158" cy="48" r="14" fill="#ffb3c7"/>
+      <circle cx="100" cy="108" r="78" fill="#ffe3d1"/>
+      <path d="M26 100c4-50 48-66 74-66s70 16 74 66c-22-8-44-30-52-46-18 26-52 40-96 46z" fill="#6b3a4f"/>
+      <g class="mata"><ellipse cx="72" cy="112" rx="8" ry="10" fill="#3b1f2b"/><ellipse cx="128" cy="112" rx="8" ry="10" fill="#3b1f2b"/>
+      <circle cx="75" cy="108" r="3" fill="#fff"/><circle cx="131" cy="108" r="3" fill="#fff"/></g>
+      <ellipse cx="52" cy="132" rx="13" ry="8" fill="#ff8fab" opacity=".7"/><ellipse cx="148" cy="132" rx="13" ry="8" fill="#ff8fab" opacity=".7"/>
+      <path d="M88 132q12 14 24 0" fill="none" stroke="#3b1f2b" stroke-width="4" stroke-linecap="round"/>
+      <path d="M92 40l8-12 8 12-8 6z" fill="#ff5d8f"/><circle cx="100" cy="38" r="5" fill="#ffd166"/>
+    </svg>
+    <span class="stiker s1">✿ Arsitektur</span>
+    <span class="stiker s2">♡ UNESA</span>
+    <span class="stiker s3">★ Kreatif</span>
+  </div>
+</header>
+
+<nav class="menu" aria-label="Navigasi">
+  <a href="#tentang">Tentang</a><a href="#skill">Skill</a><a href="#proyek">Galeri</a><a href="#denah">Denah</a><a href="#lagu-kita">Lagu</a><a href="#cinta">Gravitasi</a><a href="#kontak">Kontak</a>
+</nav>
+
+<main>
+  <section id="tentang" class="bagian">
+    <h2>Tentang aku</h2>
+    <div class="kartu besar">
+      <p>Halo! Aku <b>Djenar Naesya Ayu</b>, mahasiswi <b>Arsitektur di Universitas Negeri Surabaya</b>. Aku percaya bangunan yang baik membuat penghuninya merasa pulang, sekecil apa pun ruangnya.</p>
+      <p>Di luar studio, aku menggambar sketsa, membuat maket, dan mencari kafe lucu untuk dijadikan inspirasi desain berikutnya.</p>
+    </div>
+  </section>
+
+  <section id="skill" class="bagian">
+    <h2>Skill favorit</h2>
+    <ul class="chips">
+      <li style="--c:#ffd1dc;--n:85%"><span>AutoCAD</span><i></i></li><li style="--c:#fff1a8;--n:90%"><span>SketchUp</span><i></i></li><li style="--c:#c8f2dc;--n:70%"><span>Revit</span><i></i></li>
+      <li style="--c:#d9ccff;--n:60%"><span>Lumion</span><i></i></li><li style="--c:#ffd9b8;--n:95%"><span>Sketsa tangan</span><i></i></li><li style="--c:#bfe6ff;--n:90%"><span>Maket</span><i></i></li>
+      <li style="--c:#ffd1dc;--n:75%"><span>Photoshop</span><i></i></li><li style="--c:#c8f2dc;--n:88%"><span>Presentasi desain</span><i></i></li>
+    </ul>
+  </section>
+
+  <section id="proyek" class="bagian">
+    <h2>Galeri</h2>
+    <div class="galeri" id="galeri">
+      <figure class="foto"><img src="foto/foto1.jpg" alt="Foto Djenar membuat tanda peace di bawah langit biru" loading="lazy"><figcaption>foto1.jpg</figcaption></figure>
+      <figure class="foto vid"><video src="video/vid1.mp4" poster="video/vid1.jpg" preload="none" muted playsinline aria-label="Video Djenar 1"></video><figcaption>vid1.mp4</figcaption></figure>
+      <figure class="foto vid"><video src="video/vid2.mp4" poster="video/vid2.jpg" preload="none" muted playsinline aria-label="Video Djenar 2"></video><figcaption>vid2.mp4</figcaption></figure>
+      <figure class="foto vid"><video src="video/vid3.mp4" poster="video/vid3.jpg" preload="none" muted playsinline aria-label="Video Djenar 3"></video><figcaption>vid3.mp4</figcaption></figure>
+      <figure class="foto vid"><video src="video/vid4.mp4" poster="video/vid4.jpg" preload="none" muted playsinline aria-label="Video Djenar 4"></video><figcaption>vid4.mp4</figcaption></figure>
+    </div>
+    <div class="aksi-galeri">
+      <button id="tambahFoto" class="tombol sekunder" type="button">+ Tambah foto / video</button>
+      <input type="file" id="inputFoto" accept="image/*,video/*" multiple hidden>
+    </div>
+  </section>
+
+  <section id="denah" class="bagian">
+    <h2>Denah</h2>
+    <div class="kartu besar denah">
+      <svg viewBox="0 0 320 200" role="group" aria-label="Denah rumah kecil contoh">
+        <g class="ruang" tabindex="0" role="button" data-n="Ruang tamu" data-t="Jendela besar menghadap timur supaya pagi terasa hangat."><rect x="10" y="10" width="170" height="110"/><text x="95" y="70">Tamu</text></g>
+        <g class="ruang" tabindex="0" role="button" data-n="Dapur" data-t="Meja panjang untuk masak sekaligus tempat ngopi."><rect x="180" y="10" width="130" height="110"/><text x="245" y="70">Dapur</text></g>
+        <g class="ruang" tabindex="0" role="button" data-n="Kamar" data-t="Kecil, tenang, dan penuh cahaya alami."><rect x="10" y="120" width="120" height="70"/><text x="70" y="160">Kamar</text></g>
+        <g class="ruang" tabindex="0" role="button" data-n="Studio" data-t="Tempat sketsa, maket, dan tumpukan kertas kalkir."><rect x="130" y="120" width="180" height="70"/><text x="220" y="160">Studio</text></g>
+      </svg>
+      <p id="infoRuang" aria-live="polite">Pilih ruangan untuk melihat ceritanya.</p>
+    </div>
+  </section>
+
+  <section id="lagu-kita" class="bagian">
+    <h2>Lagu kita</h2>
+    <div class="kartu besar pemutar">
+      <span class="disc" aria-hidden="true"></span>
+      <div class="info-lagu">
+        <b id="judulLagu">Siapkah Kau ’Tuk Jatuh Cinta Lagi</b>
+        <span id="artisLagu">HIVI!</span>
+        <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Posisi lagu">
+        <small><span id="waktu">0:00</span> / <span id="durasi">0:00</span></small>
+      </div>
+      <button id="mainKartu" class="tombol" type="button">Putar</button>
+    </div>
+  </section>
+
+  <section id="cinta" class="bagian">
+    <h2>Gravitasi</h2>
+    <div class="kartu besar cinta">
+      <canvas id="hati" aria-label="Animasi partikel berbentuk hati. Klik untuk menjatuhkan, klik lagi untuk menyusun kembali." role="img"></canvas>
+      <p class="petunjuk" id="petunjuk">Gerakkan kursor untuk mengusik. Klik untuk melepas gravitasi.</p>
+      <div class="hari">
+        <label for="tanggal">Bersama sejak</label>
+        <input type="date" id="tanggal">
+        <span id="hitung" class="hitung" aria-live="polite"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontak" class="bagian">
+    <h2>Ayo ngobrol</h2>
+    <div class="kartu besar kontak">
+      <p>Punya ide atau mau kolaborasi? Kirim pesan, aku balas secepatnya.</p>
+      <a class="tombol" href="mailto:halo@contoh.com">Kirim email</a>
+      <a class="tombol sekunder" href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </section>
+</main>
+
+<footer>Dibuat dengan ♡ oleh Djenar Naesya Ayu</footer>
+<dialog id="lightbox" aria-label="Foto diperbesar"><img id="besar" alt=""><video id="besarVideo" controls playsinline></video><button id="tutupBesar" type="button" aria-label="Tutup">✕</button></dialog>
+<script src="js/script.js"></script>
+</body>
+</html>
